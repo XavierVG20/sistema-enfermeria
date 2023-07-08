@@ -6,7 +6,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
+    <link rel="icon" href="https://i0.wp.com/uecec.edu.ec/wp-content/uploads/2020/09/cropped-logo-cec-por2.png?fit=32%2C32&#038;ssl=1" sizes="32x32" />
+<link rel="icon" href="https://i0.wp.com/uecec.edu.ec/wp-content/uploads/2020/09/cropped-logo-cec-por2.png?fit=192%2C192&#038;ssl=1" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://i0.wp.com/uecec.edu.ec/wp-content/uploads/2020/09/cropped-logo-cec-por2.png?fit=180%2C180&#038;ssl=1" />
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
