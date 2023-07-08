@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism.css">
     <link href="{{ asset('admin/css/examples.css') }}" rel="stylesheet">
 
-
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/jquery.dataTables.css" />
+  
+  <script src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.js"></script>
+  
+    
    
 </head>

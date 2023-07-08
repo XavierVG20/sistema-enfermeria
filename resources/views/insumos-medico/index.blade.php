@@ -31,7 +31,7 @@
 
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-striped table-hover">
+                            <table class="table table-striped table-hover" id="example">
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
@@ -72,3 +72,10 @@
         </div>
     </div>
 @endsection
+@push('scripts')
+<script>
+    
+new DataTable('#example');
+</script>
+
+@endpush
