@@ -11,7 +11,7 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">{{ __('Detalle') }} Informe Pasiente</span>
+                            <span class="card-title">{{ __('Show') }} Informe Pasiente</span>
                         </div>
                         <div class="float-right">
                             <a class="btn btn-primary" href="{{ route('informe-pasientes.index') }}"> {{ __('Back') }}</a>
@@ -21,16 +21,16 @@
                     <div class="card-body">
                         
                         <div class="form-group">
-                            <strong>Estudiante:</strong>
-                            {{ $informePasiente->estudiante->nombres }}
+                            <strong>Id Estudiante:</strong>
+                            {{ $informePasiente->id_estudiante }}
                         </div>
                         <div class="form-group">
-                            <strong>Causa:</strong>
-                            {{ $informePasiente->is_asunto }}
+                            <strong>Motivo Emergecia:</strong>
+                            {{ $informePasiente->motivo_emergecia }}
                         </div>
                         <div class="form-group">
-                            <strong>Insumo:</strong>
-                            {{ $informePasiente->insumosMedico->nombre }}
+                            <strong>Id Insumo:</strong>
+                            {{ $informePasiente->id_insumo }}
                         </div>
                         <div class="form-group">
                             <strong>Cantidad:</strong>

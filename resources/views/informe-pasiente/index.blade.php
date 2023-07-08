@@ -18,7 +18,7 @@
 
                              <div class="float-right">
                                 <a href="{{ route('informe-pasientes.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Registras') }}
+                                  {{ __('Registrar') }}
                                 </a>
                               </div>
                         </div>
@@ -37,8 +37,11 @@
                                         <th>No</th>
                                         
 										<th>Estudiante</th>
-										<th>Causa-Visita</th>
-										
+                                        <th>Año</th>
+										<th>Motivo emergecia</th>
+										<th>Insumo</th>
+										<th>Cantidad</th>
+                                        <th>Fecha de atencion</th>
 
                                         <th></th>
                                     </tr>
@@ -49,16 +52,17 @@
                                             <td>{{ ++$i }}</td>
                                             
 											<td>{{ $informePasiente->estudiante->nombres }}</td>
-											<td>{{ $informePasiente->is_asunto }}</td>
-											
+                                            <td>{{ $informePasiente->estudiante->nivelcreated_at }}</td>
+											<td>{{ $informePasiente->motivo_emergecia }}</td>
+											<td>{{ $informePasiente->insumosMedico->nombre }}</td>
+											<td>{{ $informePasiente->cantidad }}</td>
+                                            <td>{{ $informePasiente->created_at }}</td>
 
                                             <td>
                                                 <form action="{{ route('informe-pasientes.destroy',$informePasiente->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('informe-pasientes.show',$informePasiente->id) }}"><i class="fa fa-fw fa-eye"></i> {{ __('Detalle') }}</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('informe-pasientes.edit',$informePasiente->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('informe-pasientes.edit',$informePasiente->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
                                                     @csrf
-                                                    @method('DELETE')
-                                                    <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Eliminar') }}</button>
+                                                  
                                                 </form>
                                             </td>
                                         </tr>

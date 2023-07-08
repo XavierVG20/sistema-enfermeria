@@ -13,7 +13,7 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">{{ __('Registrar') }} Informe Pasiente</span>
+                        <span class="card-title">{{ __('Create') }} Informe Pasiente</span>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="{{ route('informe-pasientes.store') }}"  role="form" enctype="multipart/form-data">

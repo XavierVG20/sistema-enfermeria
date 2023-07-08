@@ -15,9 +15,8 @@ return new class extends Migration
             $table->increments('id');
             $table->integer('id_estudiante')->unsigned();
             $table->foreign('id_estudiante')->references('id')->on('estudiantes');
-            $table->string('is_asunto',100);
+            $table->string('motivo_emergecia',100);
             $table->integer('id_insumo')->unsigned();
-
             $table->foreign('id_insumo')->references('id')->on('insumos_medicos');
             $table->string('cantidad',100);
             $table->timestamps();

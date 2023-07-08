@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property $id
  * @property $id_estudiante
- * @property $is_asunto
+ * @property $motivo_emergecia
  * @property $id_insumo
  * @property $cantidad
  * @property $created_at
@@ -25,7 +25,7 @@ class InformePasiente extends Model
     
     static $rules = [
 		'id_estudiante' => 'required',
-		'is_asunto' => 'required',
+		'motivo_emergecia' => 'required',
 		'id_insumo' => 'required',
 		'cantidad' => 'required',
     ];
@@ -37,7 +37,7 @@ class InformePasiente extends Model
      *
      * @var array
      */
-    protected $fillable = ['id_estudiante','is_asunto','id_insumo','cantidad'];
+    protected $fillable = ['id_estudiante','motivo_emergecia','id_insumo','cantidad'];
 
 
     /**

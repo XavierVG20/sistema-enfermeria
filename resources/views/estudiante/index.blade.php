@@ -36,10 +36,10 @@
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Nombres</th>
-										<th>N Identificacion</th>
-										<th>Celular</th>
-										<th>Nivel</th>
+										<th>Nombres del estudiante</th>
+										<th>Año Lectivo</th>
+										<th>Nombres del Representante</th>
+										<th>Celular del Representant</th>
 
                                         <th></th>
                                     </tr>
@@ -50,9 +50,9 @@
                                             <td>{{ ++$i }}</td>
                                             
 											<td>{{ $estudiante->nombres }}</td>
-											<td>{{ $estudiante->n_identificacion }}</td>
-											<td>{{ $estudiante->celular }}</td>
 											<td>{{ $estudiante->nivel }}</td>
+											<td>{{ $estudiante->n_representante }}</td>
+											<td>{{ $estudiante->celular }}</td>
 
                                             <td>
                                                 <form action="{{ route('estudiantes.destroy',$estudiante->id) }}" method="POST">

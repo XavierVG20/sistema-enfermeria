@@ -11,6 +11,12 @@
       <ul class="sidebar-nav" data-coreui="navigation" data-simplebar>
         
         <li class="nav-title">Navegacion</li>
+        <li class="nav-item {{ ! Route:: is('home') ?: 'active' }}"><a class="nav-link" href="{{ route('home') }}">
+        <svg class="nav-icon">
+              <use xlink:href="{{ asset('admin/node_modules/@coreui/icons/sprites/free.svg#cil-pencil ') }}"></use>
+        </svg>
+         Inicio</a></li>
+
         <li class="nav-item {{ ! Route:: is('estudiantes.index') ?: 'active' }}"><a class="nav-link" href="{{ route('estudiantes.index') }}">
         <svg class="nav-icon">
               <use xlink:href="{{ asset('admin/node_modules/@coreui/icons/sprites/free.svg#cil-pencil ') }}"></use>

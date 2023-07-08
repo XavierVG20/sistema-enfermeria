@@ -9,9 +9,9 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property $id
  * @property $nombres
- * @property $n_identificacion
- * @property $celular
  * @property $nivel
+ * @property $n_representante
+ * @property $celular
  * @property $created_at
  * @property $updated_at
  *
@@ -24,9 +24,9 @@ class Estudiante extends Model
     
     static $rules = [
 		'nombres' => 'required',
-		'n_identificacion' => 'required',
-		'celular' => 'required',
 		'nivel' => 'required',
+		'n_representante' => 'required',
+		'celular' => 'required',
     ];
 
     protected $perPage = 20;
@@ -36,7 +36,7 @@ class Estudiante extends Model
      *
      * @var array
      */
-    protected $fillable = ['nombres','n_identificacion','celular','nivel'];
+    protected $fillable = ['nombres','nivel','n_representante','celular'];
 
 
     /**

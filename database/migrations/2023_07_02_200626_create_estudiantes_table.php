@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('estudiantes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nombres',100);
-            $table->string('n_identificacion',100);
-            $table->string('celular',100);
             $table->string('nivel',100);
+            $table->string('n_representante',100);
+            $table->string('celular',100);
+           
             
             $table->timestamps();
         });

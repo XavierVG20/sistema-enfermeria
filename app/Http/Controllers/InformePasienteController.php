@@ -3,9 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\InformePasiente;
-use App\Models\Estudiante;
-
 use App\Models\InsumosMedico;
+use App\Models\Estudiante;
 use Illuminate\Http\Request;
 
 /**
@@ -38,7 +37,7 @@ class InformePasienteController extends Controller
         $insumosMedicos  = InsumosMedico ::pluck('nombre','id');
 
         $estudiantes =  Estudiante::pluck('nombres','id');
-        return view('informe-pasiente.create', compact('informePasiente','insumosMedicos','estudiantes'));
+        return view('informe-pasiente.create', compact('informePasiente', 'insumosMedicos', 'estudiantes'));
     }
 
     /**
@@ -83,7 +82,7 @@ class InformePasienteController extends Controller
 
         $estudiantes =  Estudiante::pluck('nombres','id');
 
-        return view('informe-pasiente.edit', compact('informePasiente','insumosMedicos','estudiantes'));
+        return view('informe-pasiente.edit', compact('informePasiente', 'insumosMedicos', 'estudiantes'));
     }
 
     /**

@@ -1,4 +1,4 @@
-@extends('layouts.content')
+@extends('layouts.conten')
 
 @section('template_title')
     {{ $estudiante->name ?? "{{ __('Show') Estudiante" }}
@@ -25,16 +25,16 @@
                             {{ $estudiante->nombres }}
                         </div>
                         <div class="form-group">
-                            <strong>N Identificacion:</strong>
-                            {{ $estudiante->n_identificacion }}
+                            <strong>Nivel:</strong>
+                            {{ $estudiante->nivel }}
+                        </div>
+                        <div class="form-group">
+                            <strong>N Representante:</strong>
+                            {{ $estudiante->n_representante }}
                         </div>
                         <div class="form-group">
                             <strong>Celular:</strong>
                             {{ $estudiante->celular }}
-                        </div>
-                        <div class="form-group">
-                            <strong>Nivel:</strong>
-                            {{ $estudiante->nivel }}
                         </div>
 
                     </div>
