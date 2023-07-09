@@ -37,7 +37,7 @@
                                         <th>No</th>
                                         
 										<th>Estudiante</th>
-                                        <th>Año</th>
+                                        <th>Curso</th>
 										<th>Motivo emergecia</th>
 										<th>Insumo</th>
 										<th>Cantidad</th>
@@ -52,7 +52,7 @@
                                             <td>{{ ++$i }}</td>
                                             
 											<td>{{ $informePasiente->estudiante->nombres }}</td>
-                                            <td>{{ $informePasiente->estudiante->nivelcreated_at }}</td>
+                                            <td>{{ $informePasiente->estudiante->nivel }}</td>
 											<td>{{ $informePasiente->motivo_emergecia }}</td>
 											<td>{{ $informePasiente->insumosMedico->nombre }}</td>
 											<td>{{ $informePasiente->cantidad }}</td>
@@ -60,7 +60,7 @@
 
                                             <td>
                                                 <form action="{{ route('informe-pasientes.destroy',$informePasiente->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-success" href="{{ route('informe-pasientes.edit',$informePasiente->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Edit') }}</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('informe-pasientes.edit',$informePasiente->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
                                                     @csrf
                                                   
                                                 </form>

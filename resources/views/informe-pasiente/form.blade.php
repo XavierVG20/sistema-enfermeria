@@ -2,18 +2,18 @@
     <div class="box-body">
         
         <div class="form-group">
-            {{ Form::label('id_estudiante') }}
-            {{ Form::select('id_estudiante',$estudiantes, $informePasiente->id_estudiante, ['class' => 'form-control' . ($errors->has('id_estudiante') ? ' is-invalid' : ''), 'placeholder' => 'Id Estudiante']) }}
+            {{ Form::label('estudiante') }}
+            {{ Form::select('id_estudiante',$estudiantes, $informePasiente->id_estudiante, ['class' => 'form-control' . ($errors->has('id_estudiante') ? ' is-invalid' : ''), 'placeholder' => ' Estudiante']) }}
             {!! $errors->first('id_estudiante', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('motivo_emergecia') }}
+            {{ Form::label('motivo emergecia') }}
             {{ Form::text('motivo_emergecia', $informePasiente->motivo_emergecia, ['class' => 'form-control' . ($errors->has('motivo_emergecia') ? ' is-invalid' : ''), 'placeholder' => 'Motivo Emergecia']) }}
             {!! $errors->first('motivo_emergecia', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('id_insumo') }}
-            {{ Form::select('id_insumo',$insumosMedicos, $informePasiente->id_insumo, ['class' => 'form-control' . ($errors->has('id_insumo') ? ' is-invalid' : ''), 'placeholder' => 'Id Insumo']) }}
+            {{ Form::label('insumo') }}
+            {{ Form::select('id_insumo',$insumosMedicos, $informePasiente->id_insumo, ['class' => 'form-control' . ($errors->has('id_insumo') ? ' is-invalid' : ''), 'placeholder' => 'Insumo']) }}
             {!! $errors->first('id_insumo', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">

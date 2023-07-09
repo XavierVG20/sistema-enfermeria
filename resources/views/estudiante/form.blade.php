@@ -7,8 +7,8 @@
             {!! $errors->first('nombres', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
-            {{ Form::label('Año Lectivo') }}
-            {{ Form::text('nivel', $estudiante->nivel, ['class' => 'form-control' . ($errors->has('nivel') ? ' is-invalid' : ''), 'placeholder' => 'Nivel']) }}
+            {{ Form::label('Curso') }}
+            {{ Form::text('nivel', $estudiante->nivel, ['class' => 'form-control' . ($errors->has('nivel') ? ' is-invalid' : ''), 'placeholder' => 'Curso']) }}
             {!! $errors->first('nivel', '<div class="invalid-feedback">:message</div>') !!}
         </div>
         <div class="form-group">
