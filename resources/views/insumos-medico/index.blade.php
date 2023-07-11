@@ -32,6 +32,19 @@
                     @endif
 
                     <div class="card-body">
+                    <form method="GET" action="{{ route('insumosmedicos.index') }}"  role="form" enctype="multipart/form-data">
+                            @csrf
+                            <div class="input-group">
+                            <select class="form-control" name="criterio">
+                                <option value="nombre">Nombre</option>
+                                <option value="Descripcio">Descripcion</option>
+
+    </select>
+  <input type="text" class="form-control"  name="buscar" placeholder="Texto">
+  <button class="btn btn-outline-info " type="submit" >Buscar</button>
+  </div>
+
+                        </form>
                         <div class="table-responsive">
                             <table class="table table-striped table-hover" id="example">
                                 <thead class="thead">

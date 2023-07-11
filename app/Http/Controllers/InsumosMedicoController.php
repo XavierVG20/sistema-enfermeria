@@ -16,9 +16,17 @@ class InsumosMedicoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $insumosMedicos = InsumosMedico::paginate(5);
+        
+        $buscar = $request->buscar;
+        $criterio = $request->criterio;
+
+        if ($buscar == '') {
+             $insumosMedicos = InsumosMedico::orderBy('id', 'desc')->paginate(5);
+        } else {
+             $insumosMedicos = InsumosMedico::where($criterio, 'like', '%' . $buscar . '%')->orderBy('id', 'desc')->paginate(5);
+        }
 
         return view('insumos-medico.index', compact('insumosMedicos'))
             ->with('i', (request()->input('page', 1) - 1) * $insumosMedicos->perPage());
