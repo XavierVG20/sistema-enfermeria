@@ -103,7 +103,7 @@
 
 <body>
     <div>
-        <h3>Lista de estudiates  <span class="derecha">{{ date('d-m-Y ') }}</span></h3>
+        <h3>Lista de estudiantes  <span class="derecha">{{ date('d-m-Y ') }}</span></h3>
     </div>
     <div>
         <table class="table table-bordered table-striped table-sm">
@@ -113,9 +113,9 @@
                 <tr>
                                         
 										<th>Nombres del estudiante</th>
-										<th>Año Lectivo</th>
+										<th>Curso</th>
 										<th>Nombres del Representante</th>
-										<th>Celular del Representant</th>
+										<th>Celular del Representante</th>
 
                 </tr>
             </thead>

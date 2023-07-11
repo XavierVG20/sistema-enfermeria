@@ -23,7 +23,7 @@
                           <button  type="button" data-coreui-toggle="dropdown" aria-expanded="false" class="btn btn-primary btn-sm float-right"  data-placement="left">Accion</button>
                           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                             <li><a class="dropdown-item" href="{{ route('informe-pasientes.create') }}">Registrar</a></li>
-                            <li><a class="dropdown-item" href="{{ route('reporte.pasientes') }}">Reportes</a></li>
+                            <li><a class="dropdown-item" href="{{ route('reporte.pasientes') }}">Generar Reporte</a></li>
                           </ul>
                         </div>
                               </div>
@@ -36,6 +36,21 @@
                     @endif
 
                     <div class="card-body">
+                    <form method="GET" action="{{route('informe-pasientes.index') }}"  role="form" enctype="multipart/form-data">
+                            @csrf
+                            <div class="input-group">
+                            <select class="form-control" name="criterio">
+                                <option value="nombres">Nombre</option>
+                                <option value="nivel">Curso</option>
+                                <option value="nombre">Insumo</option>
+
+
+    </select>
+  <input type="text" class="form-control"  name="buscar" placeholder="Texto">
+  <button class="btn btn-outline-info " type="submit" >Buscar</button>
+  </div>
+
+                        </form>
                         <div class="table-responsive">
                             <table class="table table-striped table-hover">
                                 <thead class="thead">

@@ -6,7 +6,7 @@ use App\Models\InformePasiente;
 use App\Models\InsumosMedico;
 use App\Models\Estudiante;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 /**
  * Class InformePasienteController
  * @package App\Http\Controllers
@@ -18,10 +18,21 @@ class InformePasienteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $informePasientes = InformePasiente::paginate(5);
-
+  
+        public function index(Request $request)
+        {
+            
+    
+            $buscar = $request->buscar;
+            $criterio = $request->criterio;
+    
+            if ($buscar == '') {
+                $informePasientes = InformePasiente::orderBy('id', 'desc')->paginate(5);
+            } else {
+                $informePasientes = InformePasiente::join('estudiantes','informe_pasientes.id_estudiante','=','estudiantes.id')
+                ->select('*')
+                ->where($criterio, 'like', '%' . $buscar . '%')->paginate(5);
+            }
         return view('informe-pasiente.index', compact('informePasientes'))
             ->with('i', (request()->input('page', 1) - 1) * $informePasientes->perPage());
     }

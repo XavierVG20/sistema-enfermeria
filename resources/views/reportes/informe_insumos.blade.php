@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Reporte de artículos</title>
+    <title>Reporte de insumos medicos</title>
     <style>
     body {
         margin: 0;
@@ -103,42 +103,36 @@
 
 <body>
     <div>
-        <h3>Informes medicos  <span class="derecha">{{ date('d-m-Y ') }}</span></h3>
+        <h3>Lista de insumos medicos  <span class="derecha">{{ date('d-m-Y ') }}</span></h3>
     </div>
     <div>
         <table class="table table-bordered table-striped table-sm">
 
-             <thead>
-            <tr>
-            <th>Datos del Paciente</th>
-            
-            </tr>
-            </thead>
+       
             <thead>
                 <tr>
-                    <th>Nombres</th>
-                    <th>Curso</th>
-                    <th>Motivo de emergencia</th>
-                    <th>Insumos ocupados</th>
-                    <th>Cantidad</th>
-                    <th>Fecha de atencion</th>
+                                        
+                <tr>
+                                      
+                                        
+										<th>Nombre</th>
+										<th>Description</th>
+										<th>Cantidad</th>
+
+                                     
+
                 </tr>
             </thead>
 
-            <tbody>
-                                    @foreach ($informePasientes as $informePasiente)
+            @foreach ($insumosMedicos as $insumosMedico)
                                         <tr>
                                             
-											<td>{{ $informePasiente->estudiante->nombres }}</td>
-                                            <td>{{ $informePasiente->estudiante->nivel }}</td>
-											<td>{{ $informePasiente->motivo_emergecia }}</td>
-											<td>{{ $informePasiente->insumosMedico->nombre }}</td>
-											<td>{{ $informePasiente->cantidad }}</td>
-                                            <td>{{ $informePasiente->created_at }}</td>
+											<td>{{ $insumosMedico->nombre }}</td>
+											<td>{{ $insumosMedico->description }}</td>
+											<td>{{ $insumosMedico->cantidad }}</td>
 
                                         </tr>
                                     @endforeach
-                                </tbody>
            
         </table>
     </div>

@@ -32,6 +32,7 @@ Route::resource('informe-pasientes', App\Http\Controllers\InformePasienteControl
 
 Route::get('/reporte',  [App\Http\Controllers\InformePasienteController::class, 'reporte_informes'])->name('reporte.pasientes');
 Route::get('/reporte-estudiantes',  [App\Http\Controllers\EstudianteController::class, 'reporte_estudiantes'])->name('reporte.estudiantes');
+Route::get('/reporte-insumos',  [App\Http\Controllers\InsumosMedicoController::class, 'reporte_insumos'])->name('reporte.insumos');
 
 Route::get('/users', [ App\Http\Controllers\UsersController::class, 'index'])->name('users.index');
 

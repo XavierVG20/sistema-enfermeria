@@ -17,9 +17,14 @@
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('insumosmedicos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Registrar') }}
-                                </a>
+                               
+                                <div class="dropdown">
+                          <button  type="button" data-coreui-toggle="dropdown" aria-expanded="false" class="btn btn-primary btn-sm float-right"  data-placement="left">Accion</button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="{{  route('insumosmedicos.create') }}">Registrar</a></li>
+                            <li><a class="dropdown-item" href="{{ route('reporte.insumos') }}">Generar Reporte</a></li>
+                          </ul>
+                        </div>
 
                                 
                               </div>
@@ -37,7 +42,7 @@
                             <div class="input-group">
                             <select class="form-control" name="criterio">
                                 <option value="nombre">Nombre</option>
-                                <option value="Descripcio">Descripcion</option>
+                                <option value="descripcion">Descripcion</option>
 
     </select>
   <input type="text" class="form-control"  name="buscar" placeholder="Texto">
@@ -46,7 +51,7 @@
 
                         </form>
                         <div class="table-responsive">
-                            <table class="table table-striped table-hover" id="example">
+                            <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>

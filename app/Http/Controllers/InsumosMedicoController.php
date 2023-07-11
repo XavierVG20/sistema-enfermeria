@@ -32,6 +32,13 @@ class InsumosMedicoController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * $insumosMedicos->perPage());
     }
 
+    public function reporte_insumos()
+    {
+        $insumosMedicos = InsumosMedico::orderBy('id', 'desc')->get();
+
+        $pdf = \PDF::loadView('reportes.informe_insumos',compact('insumosMedicos'));
+     return $pdf->download('reporte_insumos.pdf');
+    }
     /**
      * Show the form for creating a new resource.
      *
