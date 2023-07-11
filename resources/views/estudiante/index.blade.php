@@ -37,16 +37,37 @@
                     @endif
 
                     <div class="card-body">
+
+                   
+ 
+                    <form method="GET" action="{{ route('estudiantes.index') }}"  role="form" enctype="multipart/form-data">
+                            @csrf
+                            <div class="input-group">
+                            <select class="form-control" name="criterio">
+                                <option value="nombres">Estudiante</option>
+                                <option value="nivel">Curso</option>
+                                <option value="n_representante">Representante</option>
+
+    </select>
+  <input type="text" class="form-control"  name="buscar" placeholder="Texto">
+  <button class="btn btn-outline-info " type="submit" >Buscar</button>
+  </div>
+
+                        </form>
+
+  
+
+
                         <div class="table-responsive">
                             <table class="table table-striped table-hover">
                                 <thead class="thead">
                                     <tr>
                                         <th>No</th>
                                         
-										<th>Nombres del estudiante</th>
-										<th>Año Lectivo</th>
-										<th>Nombres del Representante</th>
-										<th>Celular del Representant</th>
+										<th>Estudiante</th>
+										<th>Curso</th>
+										<th>Representante</th>
+										<th>Celular-Representant</th>
 
                                         <th></th>
                                     </tr>

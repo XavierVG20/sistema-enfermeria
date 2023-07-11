@@ -16,10 +16,19 @@ class EstudianteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $estudiantes = Estudiante::paginate(5);
+        
 
+        $buscar = $request->buscar;
+        $criterio = $request->criterio;
+
+        if ($buscar == '') {
+            $estudiantes = Estudiante::orderBy('id', 'desc')->paginate(5);
+        } else {
+            $estudiantes = Estudiante::where($criterio, 'like', '%' . $buscar . '%')->orderBy('id', 'desc')->paginate(5);
+        }
+        
         return view('estudiante.index', compact('estudiantes'))
             ->with('i', (request()->input('page', 1) - 1) * $estudiantes->perPage());
     }
