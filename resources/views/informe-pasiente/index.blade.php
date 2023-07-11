@@ -17,9 +17,15 @@
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('informe-pasientes.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Registrar') }}
-                                </a>
+                               
+
+                                <div class="dropdown">
+                          <button  type="button" data-coreui-toggle="dropdown" aria-expanded="false" class="btn btn-primary btn-sm float-right"  data-placement="left">Accion</button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="{{ route('informe-pasientes.create') }}">Registrar</a></li>
+                            <li><a class="dropdown-item" href="{{ route('reporte.pasientes') }}">Reportes</a></li>
+                          </ul>
+                        </div>
                               </div>
                         </div>
                     </div>

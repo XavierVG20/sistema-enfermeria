@@ -17,10 +17,17 @@
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('estudiantes.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
-                                  {{ __('Registrar') }}
-                                </a>
+                              
+                                <div class="dropdown">
+                          <button  type="button" data-coreui-toggle="dropdown" aria-expanded="false" class="btn btn-primary btn-sm float-right"  data-placement="left">Accion</button>
+                          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                            <li><a class="dropdown-item" href="{{ route('estudiantes.create') }}">Registrar</a></li>
+                            <li><a class="dropdown-item" href="{{ route('reporte.estudiantes') }}">Reportes</a></li>
+                          </ul>
+                        </div>
+                              
                               </div>
+                             
                         </div>
                     </div>
                     @if ($message = Session::get('success'))

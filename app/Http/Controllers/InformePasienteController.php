@@ -20,10 +20,18 @@ class InformePasienteController extends Controller
      */
     public function index()
     {
-        $informePasientes = InformePasiente::paginate();
+        $informePasientes = InformePasiente::paginate(5);
 
         return view('informe-pasiente.index', compact('informePasientes'))
             ->with('i', (request()->input('page', 1) - 1) * $informePasientes->perPage());
+    }
+
+    public function reporte_informes()
+    {
+        $informePasientes = InformePasiente::all();
+
+        $pdf = \PDF::loadView('reportes.informe_pasentes',compact('informePasientes'));
+     return $pdf->download('reporte_enfermeria.pdf');
     }
 
     /**

@@ -69,9 +69,9 @@
               <div class="card col-md-5 text-white bg-primary py-5">
                 <div class="card-body text-center">
                   <div>
-                    <h2>Sign up</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <button class="btn btn-lg btn-outline-light mt-3" type="button">Register Now!</button>
+                    <h2>NOSOTROS</h2>
+                    <p>Somos una Unidad Educativa que trabaja sobre la base de una visión Humanista constructivista, en donde predomina la enseñanza de valores, dentro de un ambiente seguro, con respeto y buscando ser siempre el Segundo Hogar de nuestros estudiantes. </p>
+                    <a class="btn btn-lg btn-outline-light mt-3" type="button" href="https://uecec.edu.ec/">Ver</a>
                   </div>
                 </div>
               </div>
@@ -83,4 +83,4 @@
    
 
 
-@endsection
+@endsection 

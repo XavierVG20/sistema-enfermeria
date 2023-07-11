@@ -3,6 +3,7 @@
 @section('htmlheader')
 @include('partials.htmlheader')
 @show
+
 <body>
      @include('partials.sidebar')
    

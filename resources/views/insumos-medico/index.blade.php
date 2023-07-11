@@ -20,6 +20,8 @@
                                 <a href="{{ route('insumosmedicos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Registrar') }}
                                 </a>
+
+                                
                               </div>
                         </div>
                     </div>
@@ -74,8 +76,12 @@
 @endsection
 @push('scripts')
 <script>
-    
-new DataTable('#example');
+    $(document).ready(function() {
+        new DataTable('#example');
+        $('#example').DataTable({
+            "lengthMenu":[[5,10,50,-1],[5,10,50,"All"]]
+        })
+    });
 </script>
 
 @endpush

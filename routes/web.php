@@ -23,10 +23,16 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 
 Route::resource('estudiantes', App\Http\Controllers\EstudianteController::class);
-Route::resource('users', App\Http\Controllers\UserController::class);
+
 
 Route::resource('insumosmedicos', App\Http\Controllers\InsumosMedicoController::class);
 
  
 Route::resource('informe-pasientes', App\Http\Controllers\InformePasienteController::class);
+
+Route::get('/reporte',  [App\Http\Controllers\InformePasienteController::class, 'reporte_informes'])->name('reporte.pasientes');
+Route::get('/reporte-estudiantes',  [App\Http\Controllers\EstudianteController::class, 'reporte_estudiantes'])->name('reporte.estudiantes');
+
+Route::get('/users', [ App\Http\Controllers\UsersController::class, 'index'])->name('users.index');
+
 

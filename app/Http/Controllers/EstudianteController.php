@@ -23,7 +23,15 @@ class EstudianteController extends Controller
         return view('estudiante.index', compact('estudiantes'))
             ->with('i', (request()->input('page', 1) - 1) * $estudiantes->perPage());
     }
+    public function reporte_estudiantes()
+    {
+        $estudiantes = Estudiante::all();
 
+        $pdf = \PDF::loadView('reportes.informe_estudiantes',compact('estudiantes'));
+        return $pdf->download('reporte_estudiantes.pdf');
+
+      
+    }
     /**
      * Show the form for creating a new resource.
      *
