@@ -21,7 +21,7 @@
                                 <div class="dropdown">
                           <button  type="button" data-coreui-toggle="dropdown" aria-expanded="false" class="btn btn-primary btn-sm float-right"  data-placement="left">Accion</button>
                           <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="{{  route('insumosmedicos.create') }}">Registrar</a></li>
+                            <li><a class="dropdown-item" href="{{  route('insumos-medicos.create') }}">Registrar</a></li>
                             <li><a class="dropdown-item" href="{{ route('reporte.insumos') }}">Generar Reporte</a></li>
                           </ul>
                         </div>
@@ -37,7 +37,7 @@
                     @endif
 
                     <div class="card-body">
-                    <form method="GET" action="{{ route('insumosmedicos.index') }}"  role="form" enctype="multipart/form-data">
+                    <form method="GET" action="{{ route('insumos-medicos.index') }}"  role="form" enctype="multipart/form-data">
                             @csrf
                             <div class="input-group">
                             <select class="form-control" name="criterio">
@@ -73,8 +73,8 @@
 											<td>{{ $insumosMedico->cantidad }}</td>
 
                                             <td>
-                                                <form action="{{ route('insumosmedicos.destroy',$insumosMedico->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-success" href="{{ route('insumosmedicos.edit',$insumosMedico->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
+                                                <form action="{{ route('insumos-medicos.destroy',$insumosMedico->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-success" href="{{ route('insumos-medicos.edit',$insumosMedico->id) }}"><i class="fa fa-fw fa-edit"></i> {{ __('Editar') }}</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> {{ __('Eliminar') }}</button>
