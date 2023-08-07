@@ -39,6 +39,7 @@ class InsumosMedicoController extends Controller
         $pdf = \PDF::loadView('reportes.informe_insumos',compact('insumosMedicos'));
      return $pdf->download('reporte_insumos.pdf');
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -62,7 +63,7 @@ class InsumosMedicoController extends Controller
 
         $insumosMedico = InsumosMedico::create($request->all());
 
-        return redirect()->route('insumosmedicos.index')
+        return redirect()->route('insumos-medicos.index')
             ->with('success', 'InsumosMedico created successfully.');
     }
 
@@ -105,7 +106,7 @@ class InsumosMedicoController extends Controller
 
         $insumosMedico->update($request->all());
 
-        return redirect()->route('insumosmedicos.index')
+        return redirect()->route('insumos-medicos.index')
             ->with('success', 'InsumosMedico updated successfully');
     }
 
@@ -118,7 +119,7 @@ class InsumosMedicoController extends Controller
     {
         $insumosMedico = InsumosMedico::find($id)->delete();
 
-        return redirect()->route('insumosmedicos.index')
+        return redirect()->route('insumos-medicos.index')
             ->with('success', 'InsumosMedico deleted successfully');
     }
 }
