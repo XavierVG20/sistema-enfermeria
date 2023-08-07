@@ -22,7 +22,7 @@
               <use xlink:href="{{ asset('admin/node_modules/@coreui/icons/sprites/free.svg#cil-pencil ') }}"></use>
         </svg>
          Registro estudiantes</a></li>
-            <li class="nav-item {{ ! Route:: is('insumosmedicos.index') ?: 'active' }}"><a class="nav-link" href="{{ route('insumosmedicos.index') }}">
+            <li class="nav-item {{ ! Route:: is('insumos-medicos.index') ?: 'active' }}"><a class="nav-link" href="{{ route('insumos-medicos.index') }}">
             <svg class="nav-icon">
               <use xlink:href="{{ asset('admin/node_modules/@coreui/icons/sprites/free.svg#cil-cursor ') }}"></use>
             </svg>
