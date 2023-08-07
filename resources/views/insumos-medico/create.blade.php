@@ -1,5 +1,4 @@
 @extends('layouts.content')
-
 @section('template_title')
     {{ __('Create') }} Insumos Medico
 @endsection
@@ -13,10 +12,10 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">{{ __('Registrar') }} Insumos Medico</span>
+                        <span class="card-title">{{ __('Create') }} Insumos Medico</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('insumosmedicos.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('insumos-medicos.store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
                             @include('insumos-medico.form')
