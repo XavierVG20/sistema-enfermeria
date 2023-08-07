@@ -16,7 +16,7 @@
                         <span class="card-title">{{ __('Editar') }} Insumos Medico</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('insumosmedicos.update', $insumosMedico->id) }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('insumos-medicos.update', $insumosMedico->id) }}"  role="form" enctype="multipart/form-data">
                             {{ method_field('PATCH') }}
                             @csrf
 
