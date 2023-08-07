@@ -25,7 +25,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('estudiantes', App\Http\Controllers\EstudianteController::class);
 
 
-Route::resource('insumosmedicos', App\Http\Controllers\InsumosMedicoController::class);
+Route::resource('insumos-medicos', App\Http\Controllers\InsumosMedicoController::class);
 
  
 Route::resource('informe-pasientes', App\Http\Controllers\InformePasienteController::class);
